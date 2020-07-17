@@ -1,0 +1,14 @@
+<div class="card-content">
+  <div class="weather-data">
+    <ul *ngIf="responseReceived">
+      <li *ngFor="let key of responseKeys"> {{key}}
+        <ul>
+          <li *ngFor="let item of response[key] | keyvalue">
+            {{item.key}} => {{item.value}}
+            <div *ngIf="(item | typeof) === 'number'">{{item.value}}</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
