@@ -4,10 +4,5 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'typeof'
 })
 export class TypeofPipe implements PipeTransform {
-
-  transform(value: any): any {
-    console.log("Pipe works ",typeof value);
-    return typeof value;
-  }
-
+  transform(value) { return typeof value; }
 }

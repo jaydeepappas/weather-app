@@ -1,14 +1,32 @@
 <div class="card-content">
-  <div class="weather-data">
-    <ul *ngIf="responseReceived">
-      <li *ngFor="let key of responseKeys"> {{key}}
-        <ul>
-          <li *ngFor="let item of response[key] | keyvalue">
-            {{item.key}} => {{item.value}}
-            <div *ngIf="(item | typeof) === 'number'">{{item.value}}</div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <ul *ngIf="responseReceived" class="card-container">
+    <mat-card class="weather-card">
+      <mat-card-header>
+        <div mat-card-avatar class="card-avatar"></div>
+        <mat-card-title>Weather in {{location}}</mat-card-title>
+        <mat-card-subtitle class="weather-subtitle">{{getDate()}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <img mat-card-image src="../../../assets/placeholder-image.png" alt="Placeholder Image">
+
+      <mat-card-content class="weather-data">
+        <li *ngFor="let key of responseKeys"> {{key}}
+          <ul>
+            <li *ngFor="let item of response[key] | keyvalue">
+              {{item.key}} => {{item.value}}
+              <div *ngIf="(item.value | typeof) === 'number'">{{item.value}}</div>
+            </li>
+          </ul>
+        </li>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button>REFRESH</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </ul>
 </div>
+
+
+

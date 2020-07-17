@@ -1,9 +1,25 @@
-<div class="button">
-  <button (click)="getJSONResponse()">Click me!</button>
+<div class="header">
+  <h1>Weather App</h1>
+  <p>This page is responsive, resize the window to test</p>
 </div>
 
-<app-card
-  [responseKeys]="responseKeys"
-  [response]="response"
-  [responseReceived]="responseReceived">
-</app-card>
+<div class="main-content">
+  <div class="user-input-section">
+
+    <app-location-input></app-location-input>
+    <div class="request-button">
+      <button mat-button (click)="getJSONResponse()">Get Weather Data</button>
+    </div>
+  </div>
+
+  <app-card class="center"
+    [responseKeys]="responseKeys"
+    [response]="response"
+    [responseReceived]="responseReceived"
+    [location]="location">
+  </app-card>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
