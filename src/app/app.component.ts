@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { WeatherDataService } from './weather-data.service';
-import { DATA } from './typings';
+import { WeatherApiService } from './services/weather.api.service';
+import { DATA } from './typings/static.data';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
   public responseKeys = DATA.Response.FilteredKeys;
   public responseReceived = false;
 
-  constructor(private api: WeatherDataService) { }
+  constructor(private api: WeatherApiService) { }
 
   getJSONResponse(): Object {
     this.api.requestJSONData().subscribe((response) => {
