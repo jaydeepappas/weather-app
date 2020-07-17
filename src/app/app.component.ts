@@ -13,14 +13,14 @@ export class AppComponent {
   public response: {};
   public responseKeys = DATA.Response.FilteredKeys;
   public responseReceived = false;
-
+  public location: string;
   constructor(private api: WeatherApiService) { }
 
   getJSONResponse(): Object {
     this.api.requestJSONData().subscribe((response) => {
+      this.location = this.api.location;
       this.response = response;
       this.responseReceived = true;
-
       const sanitizeJSONResponse = (response) => {
         Object.keys(response).forEach((key) => {
           DATA.Response.FilteredKeys.includes(key) ? this.response[key] = response[key] : delete this.response[key]

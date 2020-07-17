@@ -1,0 +1,21 @@
+.weather-card {
+  max-width: 400px;
+  background: #233D4D;
+  color: white;
+}
+
+.weather-subtitle {
+  color: white;
+}
+
+.card-container {
+  padding: 0;
+}
+.weather-data {
+  padding-left: 25px;
+}
+
+.card-avatar {
+  background-image: url('../../../assets/placeholder-image.png');
+  background-size: cover;
+}

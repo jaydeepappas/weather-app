@@ -10,14 +10,17 @@ export class CardComponent implements OnInit {
   @Input() responseKeys: Array<string>;
   @Input() response: Object;
   @Input() responseReceived: boolean;
+  @Input() location: string;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit(): void {
   }
+
+  ngOnInit(): void { }
 
   kelvinToFahrenheit(kelvinTemp): number {
     return (kelvinTemp * 9 / 5) - 459.67;
   }
 
+  getDate() { return new Date().toLocaleString(); }
 }

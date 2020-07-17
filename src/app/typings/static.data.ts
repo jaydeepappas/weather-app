@@ -6,7 +6,7 @@ export const DATA = {
     FilteredKeys: [
       'main',
       'weather',
-      'wind'
+      'wind',
     ],
     SanitizedKeys: {
       Weather: 'weather'
