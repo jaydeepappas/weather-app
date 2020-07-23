@@ -3,23 +3,27 @@
   <p>This page is responsive, resize the window to test</p>
 </div>
 
-<div class="main-content">
-  <div class="user-input-section">
+<div class="content-wrapper">
+  <div class="main-content">
+    <div class="user-input-section">
 
-    <app-location-input></app-location-input>
-    <div class="request-button">
-      <button mat-button (click)="getJSONResponse()">Get Weather Data</button>
+      <app-location-input></app-location-input>
+
+      <div class="request-button">
+        <button mat-button (click)="getJSONResponse()">Get Weather Data</button>
+      </div>
     </div>
+
+    <app-card class="center"
+      [responseKeys]="responseKeys"
+      [response]="response"
+      [responseReceived]="responseReceived"
+      [location]="location">
+    </app-card>
   </div>
 
-  <app-card class="center"
-    [responseKeys]="responseKeys"
-    [response]="response"
-    [responseReceived]="responseReceived"
-    [location]="location">
-  </app-card>
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>

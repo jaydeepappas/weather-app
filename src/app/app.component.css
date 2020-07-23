@@ -10,6 +10,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: beige;
+  padding: 20px;
 }
 
 .user-input-section {
@@ -20,6 +22,7 @@
   padding: 30px;
   text-align: center;
   background: white;
+  height: 10vh;
 }
 
 .header h1 {
@@ -27,15 +30,16 @@
 }
 
 
-.main-content {
-  background-color: beige;
-  padding: 20px;
-  width: 100%;
-}
-
 .footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
+}
+
+.content-wrapper {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
