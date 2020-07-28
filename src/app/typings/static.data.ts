@@ -1,12 +1,19 @@
 export const DATA = {
   Request: {
-    Endpoint: 'https://api.openweathermap.org/data/2.5/weather'
+    Endpoints: {
+      DataEndpoint: 'https://api.openweathermap.org/data/2.5/weather',
+      IconEndpoint: 'http://openweathermap.org/img/w/'
+    },
+    Type: {
+      Data: 'data',
+      Icon: 'icon'
+    }
   },
   Response: {
     FilteredKeys: [
       'main',
       'weather',
-      'wind',
+      'wind'
     ],
     SanitizedKeys: {
       Weather: 'weather'

@@ -11,6 +11,8 @@ export class CardComponent implements OnInit {
   @Input() response: Object;
   @Input() responseReceived: boolean;
   @Input() location: string;
+  @Input() icon: any;
+  @Input() imageLoading: boolean;
 
   constructor() {
 

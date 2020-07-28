@@ -6,17 +6,16 @@
 <div class="main-content">
   <div class="user-input-section">
 
-    <app-location-input></app-location-input>
-    <div class="request-button">
-      <button mat-button (click)="getJSONResponse()">Get Weather Data</button>
-    </div>
+    <app-location-input [f]="f"></app-location-input>
   </div>
 
   <app-card class="center"
     [responseKeys]="responseKeys"
     [response]="response"
     [responseReceived]="responseReceived"
-    [location]="location">
+    [location]="location"
+    [icon]="weatherIcon"
+    [imageLoading]="isImageLoading">
   </app-card>
 </div>
 

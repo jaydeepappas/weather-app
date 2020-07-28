@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-location-input',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationInputComponent implements OnInit {
   value = 'City';
-
+@Input() f;
   constructor() { }
 
   ngOnInit(): void {
